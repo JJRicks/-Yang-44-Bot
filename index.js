@@ -173,7 +173,7 @@ client.on('message', msg => {
     
     if(msg.member.id === '284889295125479425' && msg.content.includes('!gittest')){
         //msg.react(606013202244829196);
-        msg.channel.send('Clone 2 successful');
+        msg.channel.send('Pull 3 successful');
     
         //client.emojis.get("606013202244829196")
            //.then(reaction => console.log(typeof reaction));
