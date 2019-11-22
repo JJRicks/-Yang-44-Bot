@@ -86,3 +86,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# json files
+.json/
+
+#txt files
+.txt
