@@ -1,6 +1,6 @@
 /*const Discord = require('discord.js');
 const fs = require('fs');
-
+//testing 123
 const client = new Discord.Client();
 
 var responsesArray1 = [`Yang has said "44" `];
@@ -107,6 +107,7 @@ client.on('message', msg => {
        //James id 221378647351754752
        //test
        //msg.content.includes('44')
+
        
    
        if (msg.member.id === '147869832275034112' && msg.content.includes('44')) {
