@@ -88,7 +88,17 @@ client.on('message', msg => {
    "177 is the police emergency telephone number in Morocco. Also yeah he totally hacked it.",
    "DO-178B, Software Considerations in Airborne Systems and Equipment Certification is a guidance for software development",
    "179 is a strictly non-palindromic number. It is not a palindromic number in any base.",
-   "180 is the maximum possible score in one turn at darts (three triple 20s)."]
+   "180 is the maximum possible score in one turn at darts (three triple 20s).",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   `"Hey, did you hear that there was a new school shooting in California :grinning:"`,
+   `"wefwahfwahfwa"`,
+   `"Ha! Mine's shorter!"`,
+   `"Don't worry, I am a responsible arsonist"`,
+   `"why on earth would you ever use a flashlight to illuminate your way when you could use fire"`]
    
    var count = 0;
    fs.readFile('./count.txt', function(err, data) {
@@ -116,27 +126,27 @@ client.on('message', msg => {
                if (err) throw err;
                console.log(count);
            });
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? " + funFactArray[count-147]);
+           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? Yang once said: " + funFactArray[count-147]);
            if(count === 44) {
                msg.channel.send("wow he said it 44 times, how cool is that")
            }
        }
        if(msg.member.id === '147869832275034112' && msg.content.includes('4̶4̶')) {
            count++;
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? " + funFactArray[count-147]);
+           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? Yang once said: " + funFactArray[count-147]);
            if(count === 44) {
                msg.channel.send("wow he said it 44 times, how cool is that")
            }
        }
        if(msg.member.id === '147869832275034112' && msg.content.includes('four')) {
         count++;
-        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? " + funFactArray[count-147]);
+        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? Yang once said: " + funFactArray[count-147]);
         if(count === 44) {
             msg.channel.send("wow he said it 44 times, how cool is that")
         }
         if(msg.member.id === '147869832275034112' && msg.content.includes('ɥɥ') || msg.content.includes('4­4') || msg.content.includes('4­­4')) {
             count++;
-            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? " + funFactArray[count-147]);
+            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " Did you know? Yang once said: " + funFactArray[count-147]);
             if(count === 44) {
                 msg.channel.send("wow he said it 44 times, how cool is that")
             }
