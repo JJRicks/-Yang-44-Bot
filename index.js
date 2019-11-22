@@ -158,13 +158,12 @@ client.on('message', msg => {
     }
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
-    
     }
-    /*
-    if(msg.member.id === '284889295125479425' && msg.content.includes('44')){
+    
+    if(msg.member.id === '284889295125479425' && msg.content.includes('!gittest')){
         //msg.react(606013202244829196);
-        msg.channel.send('Joel has said 44 thirteen tim... wait he did?');
-        */
+        msg.channel.send('Clone successful');
+    
         //client.emojis.get("606013202244829196")
            //.then(reaction => console.log(typeof reaction));
         
