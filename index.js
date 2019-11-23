@@ -98,7 +98,18 @@ client.on('message', msg => {
    `"wefwahfwahfwa"`,
    `"Ha! Mine's shorter!"`,
    `"Don't worry, I am a responsible arsonist"`,
-   `"why on earth would you ever use a flashlight to illuminate your way when you could use fire"`]
+   `"why on earth would you ever use a flashlight to illuminate your way when you could use fire"`,
+   `"0"`,
+   `"0"`,
+   `"jacobs music is math videos"`,
+   `"heehee michael bubble"`,
+   `"baba yetu is the single greatest song ever"`,
+   `"candy corn"`,
+   `"doing little hops and bops"`,
+   `"yall ever just want to be a bird"`,
+   `"i have too many drug searches to not be on a watchlist"`,
+   `"i need no headphone jack"`,
+   `"apple products dont suck"`];
    
    var count = 0;
    fs.readFile('./count.txt', function(err, data) {
