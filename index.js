@@ -130,7 +130,7 @@ client.on('message', msg => {
        //msg.content.includes('44')
 
        
-       if(msg.member.id === '284889295125479425' && msg.content.includes('44 test')) {
+       if(msg.member.id === '284889295125479425' && msg.content.includes('!44test_noiterate')) {
            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord.gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
        }
        if (msg.member.id === '147869832275034112' && msg.content.includes('44')) {
