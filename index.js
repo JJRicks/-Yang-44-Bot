@@ -131,7 +131,7 @@ client.on('message', msg => {
 
        
        if(msg.member.id === '284889295125479425' && msg.content.includes('!44test_noiterate')) {
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord (dot) gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
        }
        if (msg.member.id === '147869832275034112' && msg.content.includes('44')) {
            count += parseInt((msg.content.match(/44/g)||[]).length, 10);
@@ -139,21 +139,21 @@ client.on('message', msg => {
                if (err) throw err;
                console.log(count);
            });
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord (dot) gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
            if(count === 44) {
                msg.channel.send("wow he said it 44 times, how cool is that")
            }
        }
        if(msg.member.id === '147869832275034112' && msg.content.includes('4̶4̶')) {
            count++;
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord (dot) gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
            if(count === 44) {
                msg.channel.send("wow he said it 44 times, how cool is that")
            }
        }
        if(msg.member.id === '147869832275034112' && msg.content.includes('four')) {
         count++;
-        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord (dot) gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
         if(count === 44) {
             msg.channel.send("wow he said it 44 times, how cool is that")
         }
