@@ -182,9 +182,9 @@ client.on('message', msg => {
         msg.channel.send(`Shutting down...`);
     }
     
-    if(msg.member.id === '284889295125479425' && msg.content.includes('!gittest')){
+    if(msg.member.id === '284889295125479425' && msg.content.includes('!test2')){
         //msg.react(606013202244829196);
-        msg.channel.send('Pull 3 successful');
+        msg.channel.send('Pull 4 successful');
     
         //client.emojis.get("606013202244829196")
            //.then(reaction => console.log(typeof reaction));
