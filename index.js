@@ -356,7 +356,7 @@ client.on('message', msg => {
             if (err) throw err;
             console.log(count);
         });
-        msg.channel.send(responsesArray1[0] + count + responsesArray2[0] + " Did you know? " + funFactArray[count-147]);
+        msg.channel.send(responsesArray1[0] + count + responsesArray2[0] /* + " Did you know? " + funFactArray[count-147] */ );
         if(count === 44) {
             msg.channel.send("wow he said it 44 times, how cool is that")
         }
@@ -371,7 +371,7 @@ client.on('message', msg => {
             if (err) throw err;
             console.log(count);
         });
-        msg.channel.send(responsesArray1[0] + count + responsesArray2[0]) + " Did you know? " + funFactArray[count-147];
+        msg.channel.send(responsesArray1[0] + count + responsesArray2[0]) /*+ " Did you know? " + funFactArray[count-147]) */;
         if(count === 44) {
             msg.channel.send("wow he said it 44 times, how cool is that")
         }
