@@ -53,7 +53,7 @@ client.on('message', msg => {
    
    const client = new Discord.Client();
    
-   var responsesArray1 = [`Yang applied to `];
+   var responsesArray1 = [`Yang has applied to `];
    var responsesArray2 = [` colleges.`];
    var funFactArray = ["The Fiat 147 was a three-door hatchback compact car produced in Brazil from 1976 until 1986", 
    "148 is the second number to be both a heptagonal number[1] and a centered heptagonal number[2] (the first is 1)",
