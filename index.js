@@ -184,7 +184,7 @@ client.on('message', msg => {
         msg.channel.send(`Shutting down...`);
     }
     
-    if(/*msg.member.id === '284889295125479425' */ && msg.content.includes('69')){
+    if(/*msg.member.id === '284889295125479425' && */ msg.content.includes('69')){
         //msg.react(606013202244829196);
         msg.channel.send('Nice.');
     
