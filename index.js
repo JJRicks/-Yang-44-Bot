@@ -129,6 +129,30 @@ client.on('message', msg => {
        //test
        //msg.content.includes('44')
 
+       if(/*msg.member.id === '284889295125479425' && */ msg.content.includes('69')){
+        //msg.react(606013202244829196);
+        msg.channel.send('Nice.');
+    
+        //client.emojis.get("606013202244829196")
+           //.then(reaction => console.log(typeof reaction));
+        
+        //setTimeout(msg.react('2️⃣'), 1000);
+        //1️⃣ 647182609637441556
+        //2️⃣ 647182609625120788
+        //3️⃣ 647182609259954215
+        //4️⃣ 647182609524457529
+        //5️⃣ 647182609272799247
+        //6️⃣ 647182609641766943
+        //7️⃣ 647182609381588994
+        //8️⃣ 647182609469931531
+        //9️⃣ 647182609633509386
+        //emoji 10 647182609650024463
+        //0️⃣ 647182609633378335
+        //🅿 647182609511612422
+        //Ⓜ️ 647182609654480896
+        //A 647185584162340876
+        //11 647186445080985610
+    }
        
        if(msg.member.id === '284889295125479425' && msg.content.includes('!44test_noiterate')) {
            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
@@ -184,30 +208,7 @@ client.on('message', msg => {
         msg.channel.send(`Shutting down...`);
     }
     
-    if(/*msg.member.id === '284889295125479425' && */ msg.content.includes('69')){
-        //msg.react(606013202244829196);
-        msg.channel.send('Nice.');
     
-        //client.emojis.get("606013202244829196")
-           //.then(reaction => console.log(typeof reaction));
-        
-        //setTimeout(msg.react('2️⃣'), 1000);
-        //1️⃣ 647182609637441556
-        //2️⃣ 647182609625120788
-        //3️⃣ 647182609259954215
-        //4️⃣ 647182609524457529
-        //5️⃣ 647182609272799247
-        //6️⃣ 647182609641766943
-        //7️⃣ 647182609381588994
-        //8️⃣ 647182609469931531
-        //9️⃣ 647182609633509386
-        //emoji 10 647182609650024463
-        //0️⃣ 647182609633378335
-        //🅿 647182609511612422
-        //Ⓜ️ 647182609654480896
-        //A 647185584162340876
-        //11 647186445080985610
-    }
     if(msg.content.includes('13:')){
         msg.react(client.emojis.get("647182609637441556"));
         setTimeout(function(){ 
