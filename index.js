@@ -129,9 +129,9 @@ client.on('message', msg => {
        //test
        //msg.content.includes('44')
 
-       if(/*msg.member.id === '284889295125479425' && */ msg.content.includes('69')){
+       if(/*msg.member.id === '284889295125479425' && */ msg.content.includes('uwu') || msg.content.includes('owo') || msg.content.includes('OwO') || msg.content.includes('UwU')){
         //msg.react(606013202244829196);
-        msg.channel.send('Nice.');
+        msg.channel.send(`nuh uh, no way pal`);
     
         //client.emojis.get("606013202244829196")
            //.then(reaction => console.log(typeof reaction));
