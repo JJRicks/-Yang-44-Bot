@@ -53,8 +53,8 @@ client.on('message', msg => {
    
    const client = new Discord.Client();
    
-   var responsesArray1 = [`Yang has applied to `];
-   var responsesArray2 = [` colleges.`];
+   var responsesArray1 = [`You've heard the old joke, `];
+   var responsesArray2 = [` drums and a cymbal fall off a cliff. `];
    var funFactArray = ["The Fiat 147 was a three-door hatchback compact car produced in Brazil from 1976 until 1986", 
    "148 is the second number to be both a heptagonal number[1] and a centered heptagonal number[2] (the first is 1)",
    "149 is the 35th prime number, and with the next prime number, 151, is a twin prime, thus 149 is a Chen prime.",
