@@ -119,7 +119,7 @@ client.on('message', msg => {
        console.log(`Logged in as ${client.user.tag}!`);
        //client.user.setActivity("44");
        client.user.setActivity('for 44', { type: 'WATCHING' });
-       client.user.setUsername('http//prntscr.com/pu1cm1');
+       client.user.setUsername('Yang-44-Bot');
        
        
    });
