@@ -208,8 +208,8 @@ client.on('message', msg => {
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
     }
-    if(msg.member.id === '284889295125479425' && msg.content.includes('!nicktest')){
-        msg.channel.send(`/nick jjricks bot`);
+    if(msg.member.id === '284889295125479425' && msg.content.includes('he walcc')){
+        msg.channel.send(":648762132896415770:");
     }
     
     
