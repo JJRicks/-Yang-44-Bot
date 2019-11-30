@@ -208,8 +208,8 @@ client.on('message', msg => {
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
     }
-    if(msg.member.id === '284889295125479425' && msg.content.includes('Back to the future')){
-        msg.channel.send("Back to the future CVXIII (What is even going on here)");
+    if(msg.member.id === '481219393582399489' && msg.content.includes('back') || msg.content.includes('Back')){
+        msg.channel.send('to the future');
     }
     
     
