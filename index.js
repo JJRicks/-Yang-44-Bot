@@ -130,7 +130,7 @@ client.on('message', msg => {
        //test
        //msg.content.includes('44')
 
-       if(/*msg.member.id === '284889295125479425' && */ msg.content.includes('uwu') || msg.content.includes('owo') || msg.content.includes('OwO') || msg.content.includes('UwU')){
+       if(/*msg.member.id === '284889295125479425' && */ msg.content.match(/[u||U||Ù||Û||Ü||ù||ú||û||ü||ð||°||◦||θ||δ||ο||σ||o||O||0||Θ||Ò||Ó||Ô||Õ||Ö||Ø||Θ||Φ||*||.||()||@][^A-Za-z0-9]*[w||W||ψ||ω||Ψ][^A-Za-z0-9]*[u||U||Ù||Û||Ü||ù||ú||û||ü||ð||°||◦||θ||δ||ο||σ||o||O||0||Θ||Ò||Ó||Ô||Õ||Ö||Ø||Θ||Φ||*||.||()||@]/g)){
         //msg.react(606013202244829196);
         msg.channel.send(`nuh uh, no way pal`);
     
@@ -159,7 +159,7 @@ client.on('message', msg => {
            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
        }
        if (msg.member.id === '147869832275034112' && msg.content.includes('44')) {
-           count += parseInt((msg.content.match(/44/g)||[]).length, 10);
+           count += parseInt((msg.content.match(/u[^A-Za-z0-9]*w[^A-Za-z0-9]*u/g)||[]).length, 10);
            fs.writeFile('./count.txt', parseInt(count, 10), function (err) {
                if (err) throw err;
                console.log(count);
