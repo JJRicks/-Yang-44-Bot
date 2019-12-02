@@ -118,8 +118,8 @@ client.on('message', msg => {
    client.on('ready', () => {
        console.log(`Logged in as ${client.user.tag}!`);
        //client.user.setActivity("44");
-       client.user.setActivity('for 44', { type: 'WATCHING' });
-       client.user.setUsername('Yang-44-Bot');
+       client.user.setActivity('for 24hr time', { type: 'WATCHING' });
+       client.user.setUsername('Time-Converter-Bot');
        
        
    });
