@@ -154,7 +154,7 @@ client.on('message', msg => {
         //Ⓜ️ 647182609654480896
         //A 647185584162340876
         //11 647186445080985610
-    }
+    //}
        
        if(msg.member.id === '284889295125479425' && msg.content.includes('!44test_noiterate')) {
            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
