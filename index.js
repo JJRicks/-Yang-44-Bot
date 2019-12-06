@@ -215,6 +215,14 @@ client.on('message', msg => {
     if(msg.member.id === '481219393582399489' && msg.content.includes('Back') || msg.content.includes('back')){
         msg.channel.send(`to the future`);
     }
+    /*
+    if(msg.member.id != '652372399160950804' && msg.content.includes('blue') || msg.content.includes('Blue')){
+        msg.channel.send(`da be dee da ba daa`);
+    }
+    if(msg.member.id != '652372399160950804' && msg.content.includes('house') || msg.content.includes('House')){
+        msg.channel.send(`Blue his House with a blue little window`);
+    }
+    */
     
     
     if(msg.content.includes('13:')){
