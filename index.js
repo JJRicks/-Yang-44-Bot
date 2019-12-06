@@ -209,13 +209,14 @@ client.on('message', msg => {
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
     }
-    if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.content.includes('What')){
+    if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
         msg.channel.send(`You've NEVER played tuber simulator??`);
     }
-    if(msg.member.id === '481219393582399489' && msg.content.includes('Back') || msg.content.includes('back')){
+    if(msg.member.id === '481219393582399489' && msg.content.includes('Back') || msg.member.id === '481219393582399489' && msg.content.includes('back')){
         msg.channel.send(`to the future`);
     }
     /*
+    
     if(msg.member.id != '652372399160950804' && msg.content.includes('blue') || msg.content.includes('Blue')){
         msg.channel.send(`da be dee da ba daa`);
     }
