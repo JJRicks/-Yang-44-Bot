@@ -209,8 +209,8 @@ client.on('message', msg => {
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
     }
-    if(msg.member.id === '481219393582399489' && msg.content.includes('back') || msg.content.includes('Back')){
-        msg.channel.send('to the future');
+    if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.content.includes('What')){
+        msg.channel.send(`You've NEVER played tuber simulator??`);
     }
     
     
