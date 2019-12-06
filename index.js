@@ -212,6 +212,9 @@ client.on('message', msg => {
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.content.includes('What')){
         msg.channel.send(`You've NEVER played tuber simulator??`);
     }
+    if(msg.member.id === '481219393582399489' && msg.content.includes('Back') || msg.content.includes('back')){
+        msg.channel.send(`to the future`);
+    }
     
     
     if(msg.content.includes('13:')){
