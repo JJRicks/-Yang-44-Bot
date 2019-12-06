@@ -223,9 +223,10 @@ client.on('message', msg => {
         msg.channel.send(`Blue his House with a blue little window`);
     }
     */
-   if(msg.content.includes('blue')){
+   /*
+    if(msg.content.includes('blue')){
     msg.channel.send(`blue`);
-    }   
+    }   */
     
     
     if(msg.content.includes('13:')){
