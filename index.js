@@ -197,10 +197,11 @@ client.on('message', msg => {
     if(msg.member.id === '221378647351754752' && msg.content == 'ping'){
         msg.reply('pong');
     }
+    /*
     if(msg.member.id === '147869832275034112' && msg.content.includes('key')){
         msg.channel.send('Yang has said "key" ' + count + ' times.');
     }
-
+    */
     if(msg.member.id === '284889295125479425' && msg.content == 'ping'){
         msg.reply('pong');
     }
