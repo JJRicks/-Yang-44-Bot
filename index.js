@@ -159,38 +159,39 @@ client.on('message', msg => {
        if(msg.member.id === '284889295125479425' && msg.content.includes('!44test_noiterate')) {
            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
        }
-       if (msg.member.id === '147869832275034112' && msg.content.includes('44')) {
-           count += parseInt((msg.content.match(/u[^A-Za-z0-9]*w[^A-Za-z0-9]*u/g)||[]).length, 10);
-           fs.writeFile('./count.txt', parseInt(count, 10), function (err) {
-               if (err) throw err;
-               console.log(count);
-           });
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
-           if(count === 44) {
-               msg.channel.send("wow he said it 44 times, how cool is that")
-           }
-       }
-       if(msg.member.id === '147869832275034112' && msg.content.includes('4̶4̶')) {
-           count++;
-           msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
-           if(count === 44) {
-               msg.channel.send("wow he said it 44 times, how cool is that")
-           }
-       }
-       if(msg.member.id === '147869832275034112' && msg.content.includes('four')) {
-        count++;
-        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
-        if(count === 44) {
-            msg.channel.send("wow he said it 44 times, how cool is that")
-        }
-        if(msg.member.id === '147869832275034112' && msg.content.includes('ɥɥ') || msg.content.includes('4­4') || msg.content.includes('4­­4')) {
-            count++;
-            msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord (dot) gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147] */);
-            if(count === 44) {
-                msg.channel.send("wow he said it 44 times, how cool is that")
-            }
-        }
-    }
+       
+    //    if (msg.member.id === '147869832275034112' && msg.content.includes('44')) {
+    //        count += parseInt((msg.content.match(/u[^A-Za-z0-9]*w[^A-Za-z0-9]*u/g)||[]).length, 10);
+    //        fs.writeFile('./count.txt', parseInt(count, 10), function (err) {
+    //            if (err) throw err;
+    //            console.log(count);
+    //        });
+    //        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+    //        if(count === 44) {
+    //            msg.channel.send("wow he said it 44 times, how cool is that")
+    //        }
+    //    }
+    //    if(msg.member.id === '147869832275034112' && msg.content.includes('4̶4̶')) {
+    //        count++;
+    //        msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+    //        if(count === 44) {
+    //            msg.channel.send("wow he said it 44 times, how cool is that")
+    //        }
+    //    }
+    //    if(msg.member.id === '147869832275034112' && msg.content.includes('four')) {
+    //     count++;
+    //     msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0]  /*" Did you know? Yang once said: " + funFactArray[count-147]*/);
+    //     if(count === 44) {
+    //         msg.channel.send("wow he said it 44 times, how cool is that")
+    //     }
+    //     if(msg.member.id === '147869832275034112' && msg.content.includes('ɥɥ') || msg.content.includes('4­4') || msg.content.includes('4­­4')) {
+    //         count++;
+    //         msg.channel.send(responsesArray1[0] + parseInt(count, 10) + responsesArray2[0] + " *Have ideas for bot messages? Submit here!* `discord (dot) gg/f4pdXf`" /*" Did you know? Yang once said: " + funFactArray[count-147] */);
+    //         if(count === 44) {
+    //             msg.channel.send("wow he said it 44 times, how cool is that")
+    //         }
+    //     }
+    //}
 
 
     
@@ -213,12 +214,15 @@ client.on('message', msg => {
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
     }
+    /*
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
         msg.channel.send(`You've NEVER played tuber simulator??`);
     }
+    */
+    /*
     if(msg.member.id === '481219393582399489' && msg.content.includes('Back') || msg.member.id === '481219393582399489' && msg.content.includes('back')){
         msg.channel.send(`to the future`);
-    }
+    }*/
     /*
     
     if(msg.member.id != '652372399160950804' && msg.content.includes('blue') || msg.content.includes('Blue')){
