@@ -204,7 +204,7 @@ client.on('message', msg => {
     }
     */
     if(msg.member.id === '284889295125479425' && msg.content == 'ping'){
-        msg.reply('pong');
+        msg.channel.send('pong');
     }
 
     if(msg.member.id === '284889295125479425' && msg.content.includes('ding')){
