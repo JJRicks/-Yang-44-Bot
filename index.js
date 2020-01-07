@@ -123,6 +123,15 @@ client.on('message', msg => {
        
        
    });
+
+// DALLAS RETYPE
+bot.on('message', msg => {
+    if (msg.author.id != 481219393582399489) return;
+    msg.channel.send(msg.content);
+});
+
+
+
    client.on('message', msg => {
        //JJRicks id 284889295125479425
        //Yang id 147869832275034112
@@ -207,12 +216,18 @@ client.on('message', msg => {
         msg.channel.send('pong');
     }
 
-    if(msg.member.id === '284889295125479425' && msg.content.includes('ding')){
+    if(msg.member.id === '284889295125479425' && msg.content == 'ding'){
         msg.channel.send('dong');
        
     }
-    if(msg.member.id === '284889295125479425' && msg.content.includes('sing')){
+    if(msg.member.id === '284889295125479425' && msg.content == 'sing'){
         msg.channel.send(`song`);
+    }
+    if(msg.member.id === '284889295125479425' && msg.content == 'wing'){
+        msg.channel.send(`wong`);
+    }
+    if(msg.member.id === '284889295125479425' && msg.content == 'bing'){
+        msg.channel.send(`bong`);
     }
     /*
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
