@@ -127,7 +127,7 @@ client.on('message', msg => {
 // DALLAS RETYPE
 client.on('message', msg => {
     if (msg.author.id != 481219393582399489) return;
-    msg.channel.send(msg.content);
+    msg.channel.send(`Dallas said: "` + msg.content + `"`);
 });
 
 
