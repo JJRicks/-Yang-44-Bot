@@ -207,9 +207,8 @@ client.on('message', msg => {
         msg.reply('pong');
     }
 
-    if(msg.member.id === '284889295125479425' && msg.content.includes('!reboot')){
-        msg.channel.send('rebooting....');
-        msg.channel.send('implemented');
+    if(msg.member.id === '284889295125479425' && msg.content.includes('!test')){
+        msg.channel.send('yes hello, how are you?');
     }
     if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
         msg.channel.send(`Shutting down...`);
@@ -408,4 +407,4 @@ client.on('message', msg => {
     }
 });
 
-client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XdLpZA._x1pNvCnkqLoSP1cEKRRsMz1eOU');
+client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XhPpuA.CF-aymbHtfvMEHFb5zld26cZjnI');
