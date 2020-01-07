@@ -207,11 +207,12 @@ client.on('message', msg => {
         msg.reply('pong');
     }
 
-    if(msg.member.id === '284889295125479425' && msg.content.includes('!test')){
-        msg.channel.send('yes hello, how are you?');
+    if(msg.member.id === '284889295125479425' && msg.content.includes('ding')){
+        msg.channel.send('dong');
+       
     }
-    if(msg.member.id === '284889295125479425' && msg.content.includes('!shutdown')){
-        msg.channel.send(`Shutting down...`);
+    if(msg.member.id === '284889295125479425' && msg.content.includes('sing')){
+        msg.channel.send(`song`);
     }
     /*
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
@@ -407,4 +408,4 @@ client.on('message', msg => {
     }
 });
 
-client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XhPpuA.CF-aymbHtfvMEHFb5zld26cZjnI');
+client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XdLpZA._x1pNvCnkqLoSP1cEKRRsMz1eOU');
