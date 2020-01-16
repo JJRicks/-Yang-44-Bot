@@ -92,3 +92,8 @@ typings/
 
 #txt files
 .txt
+package-lock.json
+package.json
+count.txt
+test.js
+test2.js

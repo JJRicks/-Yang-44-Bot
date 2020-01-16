@@ -120,7 +120,7 @@ client.on('message', msg => {
    client.on('ready', () => {
        console.log(`Logged in as ${client.user.tag}!`);
        //client.user.setActivity("44");
-       client.user.setActivity('for 24hr time', { type: 'WATCHING' });
+       client.user.setActivity('for Dallas', { type: 'WATCHING' });
        client.user.setUsername('Time-Converter-Bot');
        
        
