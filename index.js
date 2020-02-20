@@ -120,8 +120,8 @@ client.on('message', msg => {
    client.on('ready', () => {
        console.log(`Logged in as ${client.user.tag}!`);
        //client.user.setActivity("44");
-       client.user.setActivity('for Dallas', { type: 'WATCHING' });
-       client.user.setUsername('Time-Converter-Bot');
+       client.user.setActivity('nothing', { type: 'WATCHING' });
+       client.user.setUsername('Yang-Punctuation-Bot');
        
        
    });
@@ -143,39 +143,39 @@ client.on('message', msg => {
         //msg.channel.send(`<#664267612229730306>`);
         
         edits = msg.content;
-        client.channels.get("664267612229730306").send("[" + "**" + msg.author.username + "**" + " in " + "<#" + msg.channel.id + ">" + " at " + msg.createdAt + "]: " + `"` + msg.content + `"`);
+        client.channels.get("679932808768126993").send("[" + "**" + msg.author.username + "**" + " in " + "<#" + msg.channel.id + ">" + " at " + msg.createdAt + "]: " + `"` + msg.content + `"`);
         
         setTimeout(function(){ 
             edits2 = msg.content;
             if(msg.deleted) {
                 deleted = true;
-                client.channels.get("664267612229730306").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
+                client.channels.get("679932808768126993").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
             } 
             if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
-                client.channels.get("664267612229730306").send("*Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 1 minute (will send again in 9 minutes if further edits are made):*\n>>>>>>>>>>>>>>");
-                client.channels.get("664267612229730306").send(msg.edits);
-                //client.channels.get("664267612229730306").send(edits);
-                client.channels.get("664267612229730306").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n");
+                client.channels.get("679932808768126993").send("*Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 1 minute (will send again in 9 minutes if further edits are made):*\n>>>>>>>>>>>>>>");
+                client.channels.get("679932808768126993").send(msg.edits);
+                //client.channels.get("679932808768126993").send(edits);
+                client.channels.get("679932808768126993").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n");
             }
             
         }, 60000);
         setTimeout(function(){ 
             edits3 = msg.content;
             if(msg.deleted && deleted === false) {
-                client.channels.get("664267612229730306").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
+                client.channels.get("679932808768126993").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
             } 
             if(edits2 != edits3 && (!msg.deleted || !(msg.edits.content < 2))) {
-                client.channels.get("664267612229730306").send(" \n *Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 10 minutes:*\n>>>>>>>>>>>>>>");
-                client.channels.get("664267612229730306").send(msg.edits);
-                //client.channels.get("664267612229730306").send(edits);
-                client.channels.get("664267612229730306").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n" );
+                client.channels.get("679932808768126993").send(" \n *Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 10 minutes:*\n>>>>>>>>>>>>>>");
+                client.channels.get("679932808768126993").send(msg.edits);
+                //client.channels.get("679932808768126993").send(edits);
+                client.channels.get("679932808768126993").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n" );
             }
             
-        }, 600000);
+        }, 600000); 
         
     }
 
-
+    
 
        //JJRicks id 284889295125479425
        //Yang id 147869832275034112
@@ -251,11 +251,15 @@ client.on('message', msg => {
     if(msg.member.id === '221378647351754752' && msg.content == 'ping'){
         msg.reply('pong');
     }
-    /*
-    if(msg.member.id === '147869832275034112' && msg.content.includes('key')){
-        msg.channel.send('Yang has said "key" ' + count + ' times.');
+
+    if(msg.member.id === "147869832275034112" && msg.content.includes('?')){
+        var messageContent = msg.content;
+        messageContent = messageContent.replace(new RegExp('\\?', 'g'), '.');
+        messageContent = messageContent.replace(new RegExp('\\,', 'g'), '!');
+        messageContent = messageContent.replace(new RegExp('\\*', 'g'), `'`);
+        msg.channel.send(messageContent);
     }
-    */
+
     if(msg.member.id === '284889295125479425' && msg.content == 'ping'){
         msg.channel.send('pong');
     }
@@ -270,8 +274,8 @@ client.on('message', msg => {
     if(msg.member.id === '284889295125479425' && msg.content == '!channel'){
         msg.channel.send(`<#664267612229730306>`);
     }
-    if(msg.member.id === '284889295125479425' && msg.content == 'bing'){
-        msg.channel.send(`bong`);
+    if(msg.member.id === '284889295125479425' && msg.content == '!jacob'){
+        msg.channel.send(`pls let me in I love you`);
     }
     /*
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
@@ -296,7 +300,7 @@ client.on('message', msg => {
     msg.channel.send(`blue`);
     }   */
     
-    
+    /*
     if(msg.member.id != '646061170150735904' && msg.content.includes('13:')){
         msg.react(client.emojis.get("647182609637441556"));
         setTimeout(function(){ 
@@ -403,6 +407,7 @@ client.on('message', msg => {
             msg.react(client.emojis.get("647182609654480896"));
         }, 3000);
     }
+    */
     /*
     if(msg.member.id != '646061170150735904' && msg.content.includes('uwu') || msg.content.includes('owo')){
         msg.channel.send(`uwu what's this???`);
@@ -455,5 +460,5 @@ client.on('message', msg => {
         }
     }
 });
-//client.login('O8CVx45Kcx56QezLU7lCKwJB1zn3zsrz')
-client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XhQLnA.7Km8HYBEsTv3JyJRxrSlToK2qeg');
+client.login('NjYzODI5MTU0NzAwOTg0MzUy.Xk4YOA.40Mc_7zi5CiJigCzgA0yTZlesNY')
+//client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XhQLnA.7Km8HYBEsTv3JyJRxrSlToK2qeg');
