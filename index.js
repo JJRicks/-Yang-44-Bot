@@ -137,22 +137,28 @@ client.on('message', msg => {
     var edits3 = "";
     var deleted = false;
 
-    if (msg.member.id === "663829154700984352") return;
+    if (msg.member.id === "663829154700984352") {
 
-    const args = msg.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-    var channel = "0";
-
-    if (msg.content === 'ping') {
-        msg.channel.send('Pong!');
-    } else if (msg.content === "pong") {
-        msg.channel.send("That's my line dingus!");
-    } else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
-        channel = "663794628281237524";
-    } else if (msg.channel.id == 663794628281237524) {
-        channel = "584510035657359501";
+    } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
+        const args = msg.content.slice(prefix.length).split(/ +/);
+        const command = args.shift().toLowerCase();
+        var channel = "0";
+    
+        if (msg.content === 'ping') {
+            msg.channel.send('Pong!');
+        } 
+        if (msg.content === "pong") {
+            msg.channel.send("That's my line dingus!");
+        } 
+        else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
+            channel = "663794628281237524";
+        } else if (msg.channel.id == 663794628281237524) {
+            channel = "584510035657359501";
+        }
+        if (channel != "0") client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
     }
-    if (channel != "0") client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
+
+   
 
     if(msg.member.id === '481219393582399489'){
         //msg.channel.send(`<#664267612229730306>`);
