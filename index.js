@@ -225,8 +225,9 @@ if(msg.content === "!toggle TimeConversion") {
     var deleted = false;
 
     if(enableAnnouncementApparatus) {
+    
     if (msg.member.id === "663829154700984352") {
-
+        
     } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
         const args = msg.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
@@ -237,8 +238,7 @@ if(msg.content === "!toggle TimeConversion") {
         // } 
         // if (msg.content === "pong") {
         //     msg.channel.send("That's my line dingus!");
-        } 
-        else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
+        } else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
             channel = "663794628281237524";
         } else if (msg.channel.id == 663794628281237524) {
             channel = "584510035657359501";
