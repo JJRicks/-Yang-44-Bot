@@ -245,7 +245,7 @@ if(msg.content === "!toggle TimeConversion") {
         }
         if (channel != "0") client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
     }
-    }
+    
    
 
 
