@@ -139,7 +139,7 @@ client.on('message', msg => {
 
     if (msg.member.id === "663829154700984352") {
 
-    } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
+    } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352" && msg.channel.id != "663794384956948480"){
         const args = msg.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
         var channel = "0";
