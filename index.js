@@ -273,7 +273,7 @@ client.on('message', msg => {
     if(msg.member.id === '221378647351754752' && msg.content == 'ping'){
         msg.reply('pong');
     }
-
+    /*
     if(msg.member.id === "147869832275034112" && msg.content.includes('?')  && msg.channel.id != "663794384956948480"){
         var messageContent = msg.content;
         messageContent = messageContent.replace(new RegExp('\\?', 'g'), '.');
@@ -281,7 +281,7 @@ client.on('message', msg => {
         messageContent = messageContent.replace(new RegExp('\\*', 'g'), `'`);
         msg.channel.send(messageContent);
     }
-
+    */
     if(msg.member.id === '284889295125479425' && msg.content == 'ping'){
         msg.channel.send('pong');
     }
