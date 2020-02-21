@@ -139,7 +139,7 @@ client.on('message', msg => {
 
     if (msg.member.id === "663829154700984352") {
 
-    } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352" && msg.channel.id != "663794384956948480"){
+    } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
         const args = msg.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
         var channel = "0";
@@ -274,7 +274,7 @@ client.on('message', msg => {
         msg.reply('pong');
     }
 
-    if(msg.member.id === "147869832275034112" && msg.content.includes('?')){
+    if(msg.member.id === "147869832275034112" && msg.content.includes('?')  && msg.channel.id != "663794384956948480"){
         var messageContent = msg.content;
         messageContent = messageContent.replace(new RegExp('\\?', 'g'), '.');
         messageContent = messageContent.replace(new RegExp('\\,', 'g'), '!');
