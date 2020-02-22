@@ -131,7 +131,7 @@ var enableAnnouncementApparatus = true;
 var enableDallasSpyware = false;
 var enablePingPong = true;
 var enablePunctuationCorrection = false;
-var enableTimeConversion = false;
+var enableTimeConversion = true;
 
    
 
@@ -268,35 +268,37 @@ if(msg.content === "!toggle TimeConversion") {
 //                                  |_|    |___/                        
 if(enableDallasSpyware){
     if(msg.member.id === '481219393582399489'){
+        // my id 284889295125479425
+        // dallas id 481219393582399489
         //msg.channel.send(`<#664267612229730306>`);
         
         edits = msg.content;
-        client.channels.get("679932808768126993").send("[" + "**" + msg.author.username + "**" + " in " + "<#" + msg.channel.id + ">" + " at " + msg.createdAt + "]: " + `"` + msg.content + `"`);
+        client.channels.get("664267612229730306").send("[" + "**" + msg.author.username + "**" + " in " + "<#" + msg.channel.id + ">" + " at " + msg.createdAt + "]: " + `"` + msg.content + `"`);
         
         setTimeout(function(){ 
             edits2 = msg.content;
             if(msg.deleted) {
                 deleted = true;
-                client.channels.get("679932808768126993").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
+                client.channels.get("664267612229730306").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
             } 
             if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
-                client.channels.get("679932808768126993").send("*Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 1 minute (will send again in 9 minutes if further edits are made):*\n>>>>>>>>>>>>>>");
-                client.channels.get("679932808768126993").send(msg.edits);
-                //client.channels.get("679932808768126993").send(edits);
-                client.channels.get("679932808768126993").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n");
+                client.channels.get("664267612229730306").send("*Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 1 minute (will send again in 9 minutes if further edits are made):*\n>>>>>>>>>>>>>>");
+                client.channels.get("664267612229730306").send(msg.edits);
+                //client.channels.get("664267612229730306").send(edits);
+                client.channels.get("664267612229730306").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n");
             }
             
         }, 60000);
         setTimeout(function(){ 
             edits3 = msg.content;
             if(msg.deleted && deleted === false) {
-                client.channels.get("679932808768126993").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
+                client.channels.get("664267612229730306").send("**__*The message:*__** " + `"` + msg.content + `"` + " **__*was deleted.*__**"); 
             } 
             if(edits2 != edits3 && (!msg.deleted || !(msg.edits.content < 2))) {
-                client.channels.get("679932808768126993").send(" \n *Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 10 minutes:*\n>>>>>>>>>>>>>>");
-                client.channels.get("679932808768126993").send(msg.edits);
-                //client.channels.get("679932808768126993").send(edits);
-                client.channels.get("679932808768126993").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n" );
+                client.channels.get("664267612229730306").send(" \n *Edit history of*  " + `"` + msg.content + `"` + " *reverse-chronologically over a period of 10 minutes:*\n>>>>>>>>>>>>>>");
+                client.channels.get("664267612229730306").send(msg.edits);
+                //client.channels.get("664267612229730306").send(edits);
+                client.channels.get("664267612229730306").send(">>>>>>>>>>>>>>\nThis message was edited a total of " + (msg.edits.length - 1) + " time(s). \n" );
             }
             
         }, 600000); 
@@ -411,22 +413,22 @@ if(enablePunctuationCorrection){
 // | |             __/ | | |                 __/ |
 // |_|            |___/  |_|                |___/ 
 if(enablePingPong) {
-    if(msg.member.id === '284889295125479425' && msg.content == 'ping'){
+    if(msg.content == 'ping'){
         msg.channel.send('pong');
     }
 
-    if(msg.member.id === '284889295125479425' && msg.content == 'ding'){
+    if(msg.content == 'ding'){
         msg.channel.send('dong');
        
     }
-    if(msg.member.id === '284889295125479425' && msg.content == 'sing'){
+    if(msg.content == 'sing'){
         msg.channel.send(`song`);
     }
-    if(msg.member.id === '284889295125479425' && msg.content == '!channel'){
+    if(msg.content == '!channel'){
         msg.channel.send(`<#664267612229730306>`);
     }
-    if(msg.member.id === '284889295125479425' && msg.content == '!jacob'){
-        msg.channel.send(`yes`);
+    if(msg.content == '!jacob'){
+        msg.channel.send(`hi jacob`);
     }
 
 }
@@ -464,7 +466,7 @@ if(enablePingPong) {
 //    \_/ |_|_| |_| |_|\___|  \____/\___/|_| |_|\_/ \___|_|  |___/_|\___/|_| |_|
                                                                              
 if(enableTimeConversion) {                                                                           
-    if(msg.member.id != '646061170150735904' && msg.content.includes('13:')){
+    if(msg.member.id != '663829154700984352' && msg.content.includes('13:')){
         msg.react(client.emojis.get("647182609637441556"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -472,7 +474,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('14:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('14:')){
         msg.react(client.emojis.get("647182609625120788"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -480,7 +482,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('15:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('15:')){
         msg.react(client.emojis.get("647182609259954215"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -488,7 +490,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('16:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('16:')){
         msg.react(client.emojis.get("647182609524457529"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -496,7 +498,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('17:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('17:')){
         msg.react(client.emojis.get("647182609272799247"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -504,7 +506,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('18:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('18:')){
         msg.react(client.emojis.get("647182609641766943"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -512,7 +514,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('19:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('19:')){
         msg.react(client.emojis.get("647182609381588994"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -520,7 +522,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('20:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('20:')){
         msg.react(client.emojis.get("647182609469931531"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -528,7 +530,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('21:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('21:')){
         msg.react(client.emojis.get("647182609633509386"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -536,7 +538,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('22:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('22:')){
         msg.react(client.emojis.get("647182609650024463"));
         // setTimeout(function(){ 
         //     msg.react('0️⃣');
@@ -547,7 +549,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('23:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('23:')){
         msg.react(client.emojis.get("647186445080985610"));
         // setTimeout(function(){ 
         //     msg.react('1️⃣');
@@ -558,7 +560,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '646061170150735904' && msg.content.includes('00:')){
+    } else if(msg.member.id != '663829154700984352' && msg.content.includes('00:')){
         msg.react(client.emojis.get("647182609637441556"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609625120788"));
