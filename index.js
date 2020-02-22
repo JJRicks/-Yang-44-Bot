@@ -424,7 +424,7 @@ if(enablePingPong) {
     if(msg.content == 'sing'){
         msg.channel.send(`song`);
     }
-    if(msg.content == 'pong'){
+    if(msg.member.id != "663829154700984352" && msg.content == 'pong'){
         msg.channel.send(`That's my line, dingus!`);
     }
     if(msg.content == '!jacob'){
