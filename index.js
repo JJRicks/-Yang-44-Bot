@@ -132,6 +132,9 @@ var enableDallasSpyware = false;
 var enablePingPong = true;
 var enablePunctuationCorrection = false;
 var enableTimeConversion = true;
+var enableMinecraftChannelConnection = true;
+var enableChaiseLoungueConnection = true;
+var enableBopsConnection = true;
 
    
 
@@ -139,11 +142,14 @@ var enableTimeConversion = true;
 client.on('message', msg => {
 if(msg.content === "!menu") {
     msg.channel.send("The following menu contains all toggleable options and their current states: \n" + 
-     "```" + "AnnouncementApparatus: " + enableAnnouncementApparatus + 
+     "```" + "AnnouncementApparatus: " + enableAnnouncementApparatus + " ('?' required)" +
      "\nDallasSpyware: " + enableDallasSpyware + 
      "\nPingPong: " + enablePingPong + 
      "\nPunctuationCorrection: " + enablePunctuationCorrection +
      "\nTimeConversion: " + enableTimeConversion +
+     "\nMinecraftChannelConnection: " + enableMinecraftChannelConnection +
+     "\nChaiseLoungeConnection: " + enableChaiseLoungueConnection +
+     "\nBopsConnection: " + enableBopsConnection + " ('?' required)" +
      "```");
 }
 
@@ -194,6 +200,36 @@ if(msg.content === "!toggle TimeConversion") {
     } else {
         enableTimeConversion = true;
         msg.channel.send("Time Conversion ENABLED");
+    }
+}
+
+if(msg.content === "!toggle MinecraftChannelConnection") {
+    if(enableTimeConversion === true) {
+        enableTimeConversion = false;
+        msg.channel.send("Minecraft Channel Connection DISABLED");
+    } else {
+        enableTimeConversion = true;
+        msg.channel.send("Minecraft Channel Connection ENABLED");
+    }
+}
+
+if(msg.content === "!toggle ChaiseLoungueConnection") {
+    if(enableTimeConversion === true) {
+        enableTimeConversion = false;
+        msg.channel.send("Chaise Loungue Connection DISABLED");
+    } else {
+        enableTimeConversion = true;
+        msg.channel.send("Chaise Loungue Connection ENABLED");
+    }
+}
+
+if(msg.content === "!toggle BopsConnection") {
+    if(enableTimeConversion === true) {
+        enableTimeConversion = false;
+        msg.channel.send("Chaise Loungue Connection DISABLED");
+    } else {
+        enableTimeConversion = true;
+        msg.channel.send("Chaise Loungue Connection ENABLED");
     }
 }
 
@@ -573,6 +609,96 @@ if(enableTimeConversion) {
         }, 3000);
     }
 }
+
+//  __  __ _                            __ _          _                            _ 
+// |  \/  (_)                          / _| |        | |                          | |
+// | \  / |_ _ __   ___  ___ _ __ __ _| |_| |_    ___| |__   __ _ _ __  _ __   ___| |
+// | |\/| | | '_ \ / _ \/ __| '__/ _` |  _| __|  / __| '_ \ / _` | '_ \| '_ \ / _ \ |
+// | |  | | | | | |  __/ (__| | | (_| | | | |_  | (__| | | | (_| | | | | | | |  __/ |
+// |_|  |_|_|_| |_|\___|\___|_|  \__,_|_|  \__|  \___|_| |_|\__,_|_| |_|_| |_|\___|_|
+
+if(enableMinecraftChannelConnection) {
+    
+    if (msg.member.id === "663829154700984352") {
+        //do nothing
+    } else if (msg.member.id != "663829154700984352"){
+        const args = msg.content.slice(prefix.length).split(/ +/);
+        const command = args.shift().toLowerCase();
+        var channel = "0";
+    
+        if (msg.channel.id == 663815810489253890) {
+            channel = "629451594236297255";
+        } else if (msg.channel.id == 629451594236297255) {
+            channel = "663815810489253890";
+        }
+        if (channel != "0") { 
+            client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
+        }
+    }  
+}
+
+
+
+//   _____ _           _            _                                     _____                            _   _             
+//  / ____| |         (_)          | |                                   / ____|                          | | (_)            
+// | |    | |__   __ _ _ ___  ___  | |     ___  _   _ _ __   __ _  ___  | |     ___  _ __  _ __   ___  ___| |_ _  ___  _ __  
+// | |    | '_ \ / _` | / __|/ _ \ | |    / _ \| | | | '_ \ / _` |/ _ \ | |    / _ \| '_ \| '_ \ / _ \/ __| __| |/ _ \| '_ \ 
+// | |____| | | | (_| | \__ \  __/ | |___| (_) | |_| | | | | (_| |  __/ | |___| (_) | | | | | | |  __/ (__| |_| | (_) | | | |
+//  \_____|_| |_|\__,_|_|___/\___| |______\___/ \__,_|_| |_|\__, |\___|  \_____\___/|_| |_|_| |_|\___|\___|\__|_|\___/|_| |_|
+//                                                          __/ |                                                           
+//                                                         |___/                                                            
+
+if(enableChaiseLoungueConnection) {
+    
+    if (msg.member.id === "663829154700984352") {
+        //do nothing
+    } else if (msg.member.id != "663829154700984352"){
+        const args = msg.content.slice(prefix.length).split(/ +/);
+        const command = args.shift().toLowerCase();
+        var channel = "0";
+    
+        if (msg.channel.id == 643530709260042319) {
+            channel = "663794384956948480";
+        } else if (msg.channel.id == 663794384956948480) {
+            channel = "643530709260042319";
+        }
+        if (channel != "0") { 
+            client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
+        }
+    }  
+}
+
+
+//  ____                     _____                            _   _             
+// |  _ \                   / ____|                          | | (_)            
+// | |_) | ___  _ __  ___  | |     ___  _ __  _ __   ___  ___| |_ _  ___  _ __  
+// |  _ < / _ \| '_ \/ __| | |    / _ \| '_ \| '_ \ / _ \/ __| __| |/ _ \| '_ \ 
+// | |_) | (_) | |_) \__ \ | |___| (_) | | | | | | |  __/ (__| |_| | (_) | | | |
+// |____/ \___/| .__/|___/  \_____\___/|_| |_|_| |_|\___|\___|\__|_|\___/|_| |_|
+//             | |                                                              
+//             |_|                                                              
+
+if(enableBopsConnection) {
+    
+    if (msg.member.id === "663829154700984352") {
+        //do nothing
+    } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
+        const args = msg.content.slice(prefix.length).split(/ +/);
+        const command = args.shift().toLowerCase();
+        var channel = "0";
+    
+        if (msg.channel.id == 626608521907142669) {
+            channel = "663815759847227392";
+        } else if (msg.channel.id == 663815759847227392) {
+            channel = "626608521907142669";
+        }
+        if (channel != "0") { 
+            client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
+        }
+}
+}
+
+
     /*
     if(msg.member.id != '646061170150735904' && msg.content.includes('uwu') || msg.content.includes('owo')){
         msg.channel.send(`uwu what's this???`);
