@@ -262,12 +262,13 @@ if(msg.content === "!toggle BopsConnection") {
 
     if(enableAnnouncementApparatus) {
     
-        if (msg.member.id === "663829154700984352") {
+        if ( msg.member.id === "663829154700984352") {
             //do nothing
         } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
             const args = msg.content.slice(prefix.length).split(/ +/);
             const command = args.shift().toLowerCase();
             var channel = "0";
+            var Attachment = (msg.attachments).array();
         
             if (msg.content === 'ping') {
                 msg.channel.send('Pong!');
@@ -276,11 +277,27 @@ if(msg.content === "!toggle BopsConnection") {
                 msg.channel.send("That's my line dingus!");
             } else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
                 channel = "663794628281237524";
+                var backupChannel = "663794628281237524";
             } else if (msg.channel.id == 663794628281237524) {
                 channel = "584510035657359501";
+                var backupChannel = "584510035657359501";
+
             }
             if (channel != "0") { 
                 client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
+                Attachment.forEach(function(attachment) {
+                    client.channels.get(channel).send(attachment.url);
+                })
+                setTimeout(function(){ 
+                    edits2 = msg.content;
+                    
+                    if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
+                        client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
+                        console.log("Edit detected in channel " + backupChannel);
+                        
+                    }
+                    
+                }, 60000);
             }
     }
 }
@@ -622,17 +639,39 @@ if(enableMinecraftChannelConnection) {
     if (msg.member.id === "663829154700984352") {
         //do nothing
     } else if (msg.member.id != "663829154700984352"){
+        edits = msg.content;
+
         const args = msg.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
         var channel = "0";
+        var Attachment = (msg.attachments).array();
+
     
         if (msg.channel.id == 663815810489253890) {
             channel = "629451594236297255";
+            var backupChannel = "629451594236297255";
         } else if (msg.channel.id == 629451594236297255) {
             channel = "663815810489253890";
+            var backupChannel = "663815810489253890";
         }
         if (channel != "0") { 
+            console.log(channel);
             client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
+            Attachment.forEach(function(attachment) {
+                client.channels.get(channel).send(attachment.url);
+            })
+
+            setTimeout(function(){ 
+                edits2 = msg.content;
+                
+                if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
+                    client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
+                    console.log("Edit detected in channel " + backupChannel);
+                    
+                }
+                
+            }, 60000);
+            
         }
     }  
 }
@@ -656,14 +695,31 @@ if(enableChaiseLoungueConnection) {
         const args = msg.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
         var channel = "0";
+        var Attachment = (msg.attachments).array();
     
         if (msg.channel.id == 643530709260042319) {
             channel = "663794384956948480";
+            var backupChannel = "663794384956948480";
         } else if (msg.channel.id == 663794384956948480) {
             channel = "643530709260042319";
+            var backupChannel = "643530709260042319";
         }
         if (channel != "0") { 
             client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
+            Attachment.forEach(function(attachment) {
+                client.channels.get(channel).send(attachment.url);
+              })
+
+              setTimeout(function(){ 
+                edits2 = msg.content;
+                
+                if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
+                    client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
+                    console.log("Edit detected in channel " + backupChannel);
+                    
+                }
+                
+            }, 60000);
         }
     }  
 }
@@ -686,14 +742,30 @@ if(enableBopsConnection) {
         const args = msg.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
         var channel = "0";
+        var Attachment = (msg.attachments).array();
     
         if (msg.channel.id == 626608521907142669) {
             channel = "663815759847227392";
+            var backupChannel = "663815759847227392";
         } else if (msg.channel.id == 663815759847227392) {
             channel = "626608521907142669";
+            var backupChannel = "626608521907142669";
         }
         if (channel != "0") { 
             client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
+            Attachment.forEach(function(attachment) {
+                client.channels.get(channel).send(attachment.url);
+              })
+              setTimeout(function(){ 
+                edits2 = msg.content;
+                
+                if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
+                    client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
+                    console.log("Edit detected in channel " + backupChannel);
+                    
+                }
+                
+            }, 60000);
         }
 }
 }
