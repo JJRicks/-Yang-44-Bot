@@ -293,7 +293,7 @@ if(msg.content === "!toggle BopsConnection") {
                     
                     if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
                         client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
-                        console.log("Edit detected in channel " + backupChannel);
+                        //console.log("Edit detected in channel " + backupChannel);
                         
                     }
                     
@@ -302,7 +302,32 @@ if(msg.content === "!toggle BopsConnection") {
     }
 }
     
-   
+//  _____                                   
+// |  __ \                                  
+// | |__) |_____   _____ _ __ ___  ___ _ __ 
+// |  _  // _ \ \ / / _ \ '__/ __|/ _ \ '__|
+// | | \ \  __/\ V /  __/ |  \__ \  __/ |   
+// |_|  \_\___| \_/ \___|_|  |___/\___|_|   
+if(msg.content.startsWith("!reverse")) { 
+    //msg.channel.send("Hello");
+    var newString = "";
+    var args = "" + msg.content.slice("!reverse".length).split(/ +/);
+    
+    for (var i = args.length - 1; i >= 0; i--) {
+        newString += args[i];
+    }
+    var otherString = "";
+
+    for(var i = 0; i < newString.length; i++) {
+        if(newString[i] != ",") {
+            otherString += newString[i];
+        } else {
+            otherString += " ";
+        }
+
+    }
+    msg.channel.send(otherString);
+}        
 
 
 
@@ -655,7 +680,7 @@ if(enableMinecraftChannelConnection) {
             var backupChannel = "663815810489253890";
         }
         if (channel != "0") { 
-            console.log(channel);
+            //console.log(channel);
             client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
             Attachment.forEach(function(attachment) {
                 client.channels.get(channel).send(attachment.url);
@@ -666,7 +691,7 @@ if(enableMinecraftChannelConnection) {
                 
                 if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
                     client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
-                    console.log("Edit detected in channel " + backupChannel);
+                    //console.log("Edit detected in channel " + backupChannel);
                     
                 }
                 
@@ -715,7 +740,7 @@ if(enableChaiseLoungueConnection) {
                 
                 if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
                     client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
-                    console.log("Edit detected in channel " + backupChannel);
+                    //console.log("Edit detected in channel " + backupChannel);
                     
                 }
                 
@@ -723,6 +748,10 @@ if(enableChaiseLoungueConnection) {
         }
     }  
 }
+
+                              
+                                         
+
 
 
 //  ____                     _____                            _   _             
@@ -761,7 +790,7 @@ if(enableBopsConnection) {
                 
                 if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
                     client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
-                    console.log("Edit detected in channel " + backupChannel);
+                    //console.log("Edit detected in channel " + backupChannel);
                     
                 }
                 
