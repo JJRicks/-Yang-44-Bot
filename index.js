@@ -308,7 +308,7 @@ if(msg.content === "!toggle BopsConnection") {
 // |  _  // _ \ \ / / _ \ '__/ __|/ _ \ '__|
 // | | \ \  __/\ V /  __/ |  \__ \  __/ |   
 // |_|  \_\___| \_/ \___|_|  |___/\___|_|   
-if(msg.content.startsWith("!reverse") && msg.member.id != "663829154700984352") { 
+if(msg.content.startsWith("!reverse")/* && msg.member.id != "663829154700984352"*/) { 
     //msg.channel.send("Hello");
     var newString = "";
     var args = "" + msg.content.slice("!reverse".length).split(/ +/);
