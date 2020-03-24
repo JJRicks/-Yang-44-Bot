@@ -308,6 +308,7 @@ if(msg.content === "!toggle BopsConnection") {
 // |  _  // _ \ \ / / _ \ '__/ __|/ _ \ '__|
 // | | \ \  __/\ V /  __/ |  \__ \  __/ |   
 // |_|  \_\___| \_/ \___|_|  |___/\___|_|   
+
 if(msg.content.startsWith("!reverse")/* && msg.member.id != "663829154700984352"*/) { 
     //msg.channel.send("Hello");
     var newString = "";
@@ -651,6 +652,57 @@ if(enableTimeConversion) {
         }, 3000);
     }
 }
+
+
+
+//  _______    _ _      _               _                            _ 
+// |__   __|  | | |    | |             | |                          | |
+//    | | __ _| | | __ | |_ ___     ___| |__   __ _ _ __  _ __   ___| |
+//    | |/ _` | | |/ / | __/ _ \   / __| '_ \ / _` | '_ \| '_ \ / _ \ |
+//    | | (_| | |   <  | || (_) | | (__| | | | (_| | | | | | | |  __/ |
+//    |_|\__,_|_|_|\_\  \__\___/   \___|_| |_|\__,_|_| |_|_| |_|\___|_|
+                                                                    
+if(msg.channel.id === "690359993693896718" && msg.member.id != "663829154700984352") {
+    var newString = "";
+    var otherString = "";
+    //console.log("Talk to channel test");
+    //msg.channel.send("hello");
+    var channelID = msg.content.substring(0,18); 
+    var newString = "" + msg.content.slice(18).split(/ +/);
+    var stringThing = "";
+    //msg.channel.send(args);
+    //msg.channel.send(channelID);
+    if(msg.content.startsWith("!startTyping ")) {
+        stringThing = "" + msg.content.slice("!startTyping ".length).split(/ +/);
+        //console.log(stringThing);
+        //client.channels.get(stringThing).startTyping();
+        try {
+            client.channels.get(stringThing).startTyping();
+        } catch {
+    
+        }
+    }
+    for(var i = 0; i < newString.length; i++) {
+        if(newString[i] != ",") {
+            otherString += newString[i];
+        } else {
+            otherString += " ";
+        }
+
+    }
+    try {
+        client.channels.get(channelID).send(otherString);
+        client.channels.get(channelID).stopTyping();
+        client.channels.get(stringThing).stopTyping();
+
+    } catch {
+
+    }
+    
+   
+}                                                            
+
+
 
 //  __  __ _                            __ _          _                            _ 
 // |  \/  (_)                          / _| |        | |                          | |
