@@ -120,8 +120,8 @@ client.on('message', msg => {
    client.on('ready', () => {
        console.log(`Logged in as ${client.user.tag}!`);
        //client.user.setActivity("44");
-       client.user.setActivity('reviving meme', { type: 'PLAYING' });
-       client.user.setUsername(`Prepare for my server`);
+       client.user.setActivity('for announcements', { type: 'WATCHING' });
+       client.user.setUsername(`Announcement Apparatus`);
        
        
    });
