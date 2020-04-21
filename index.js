@@ -550,7 +550,7 @@ if(enablePingPong) {
 //    \_/ |_|_| |_| |_|\___|  \____/\___/|_| |_|\_/ \___|_|  |___/_|\___/|_| |_|
                                                                              
 if(enableTimeConversion) {                                                                           
-    if(msg.member.id != '663829154700984352' && msg.content.includes('13:')){
+    if(msg.content.includes('13:')){
         msg.react(client.emojis.get("647182609637441556"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -558,7 +558,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('14:')){
+    } else if(msg.content.includes('14:')){
         msg.react(client.emojis.get("647182609625120788"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -566,7 +566,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('15:')){
+    } else if(msg.content.includes('15:')){
         msg.react(client.emojis.get("647182609259954215"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -574,7 +574,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('16:')){
+    } else if(msg.content.includes('16:')){
         msg.react(client.emojis.get("647182609524457529"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -582,7 +582,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('17:')){
+    } else if(msg.content.includes('17:')){
         msg.react(client.emojis.get("647182609272799247"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -590,7 +590,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('18:')){
+    } else if(msg.content.includes('18:')){
         msg.react(client.emojis.get("647182609641766943"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -598,7 +598,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('19:')){
+    } else if(msg.content.includes('19:')){
         msg.react(client.emojis.get("647182609381588994"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -606,7 +606,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('20:')){
+    } else if(msg.content.includes('20:')){
         msg.react(client.emojis.get("647182609469931531"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -614,7 +614,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('21:')){
+    } else if(msg.content.includes('21:')){
         msg.react(client.emojis.get("647182609633509386"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609511612422"));
@@ -622,7 +622,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('22:')){
+    } else if(msg.content.includes('22:')){
         msg.react(client.emojis.get("647182609650024463"));
         // setTimeout(function(){ 
         //     msg.react('0️⃣');
@@ -633,7 +633,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('23:')){
+    } else if(msg.content.includes('23:')){
         msg.react(client.emojis.get("647186445080985610"));
         // setTimeout(function(){ 
         //     msg.react('1️⃣');
@@ -644,7 +644,7 @@ if(enableTimeConversion) {
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609654480896"));
         }, 2000);
-    } else if(msg.member.id != '663829154700984352' && msg.content.includes('00:')){
+    } else if(msg.content.includes('00:')){
         msg.react(client.emojis.get("647182609637441556"));
         setTimeout(function(){ 
             msg.react(client.emojis.get("647182609625120788"));
