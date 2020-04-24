@@ -264,7 +264,7 @@ if(msg.content === "!toggle BopsConnection") {
     
         if ( msg.member.id === "663829154700984352") {
             //do nothing
-        } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
+        } else if (/*msg.content.startsWith(prefix) && */msg.member.id != "663829154700984352"){
             const args = msg.content.slice(prefix.length).split(/ +/);
             const command = args.shift().toLowerCase();
             var channel = "0";
@@ -284,7 +284,7 @@ if(msg.content === "!toggle BopsConnection") {
 
             }
             if (channel != "0") { 
-                client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
+                client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content/*.slice(prefix.length)*/);
                 Attachment.forEach(function(attachment) {
                     client.channels.get(channel).send(attachment.url);
                 })
