@@ -270,12 +270,7 @@ if(msg.content === "!toggle BopsConnection") {
             var channel = "0";
             var Attachment = (msg.attachments).array();
         
-            if (msg.content === 'ping') {
-                msg.channel.send('Pong!');
-            } 
-            if (msg.content === "pong") {
-                msg.channel.send("That's my line dingus!");
-            } else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
+            if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
                 channel = "663794628281237524";
                 var backupChannel = "663794628281237524";
             } else if (msg.channel.id == 663794628281237524) {
