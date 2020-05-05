@@ -334,13 +334,16 @@ if(msg.content.toLowerCase().includes("joel") && msg.member.id != "6638291547009
 }
 if(hasOuijaTriggered === false) {
     if(msg.content.toLowerCase().includes("ouija board") && msg.member.id != "663829154700984352") {
-        msg.channel.send("W");
-        msg.channel.send("A");
-        msg.channel.send("L");
-        msg.channel.send("U");
+        msg.channel.send("B");
         msg.channel.send("I");
         msg.channel.send("G");
-        msg.channel.send("I");
+        msg.channel.send("C");
+        msg.channel.send("H");
+        msg.channel.send("U");
+        msg.channel.send("N");
+	    msg.channel.send("G");
+	    msg.channel.send("U");
+	    msg.channel.send("S");
         msg.channel.send("goodbye"); 
         hasOuijaTriggered = true;
     }
