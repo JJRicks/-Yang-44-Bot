@@ -331,6 +331,16 @@ if(msg.content.startsWith("!reverse")/* && msg.member.id != "663829154700984352"
 if(msg.content.toLowerCase().includes("joel") && msg.member.id != "663829154700984352") {
     client.channels.get("696228640945340496").send("<@!284889295125479425>" + ", [" + "**" + msg.author.username + "**" + "] " + "mentioned you in " + "<#" + msg.channel.id + ">" + " on " + msg.createdAt + "]: " + `"` + msg.content + `"`);
 }
+if(msg.content.includes("ouija board") && msg.member.id != "663829154700984352") {
+    msg.channel.send("W");
+    msg.channel.send("A");
+    msg.channel.send("L");
+    msg.channel.send("U");
+    msg.channel.send("I");
+    msg.channel.send("G");
+    msg.channel.send("I");
+    msg.channel.send("goodbye"); 
+}
 
 
 
