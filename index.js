@@ -135,10 +135,15 @@ var enableTimeConversion = true;
 var enableMinecraftChannelConnection = true;
 var enableChaiseLoungueConnection = true;
 var enableBopsConnection = true;
-var hasOuijaTriggered = false;
 
-   
-
+const proclamationsSwitch = new Discord.WebhookClient("710343116917571627", "ftEAAm0_XrohDDYzKv83RU42zQk3flYnj-I-UAWQEM4RsjYVQE1SKyw6CVD3azNLsuNO");
+const proclamationsPundits = new Discord.WebhookClient("710343218700746793", "objb3Iy_N7qZBuXBc4Gb8rjg3cRVG-fx8QYBspNukNuBmyYTx29AqSEsbPFoz8VcwW-d");
+const minecraftSwitch = new Discord.WebhookClient("710346506062004286", "JpDFYFZs26Ti5bDK_OAtqown8IFhCoJMrBHivltmzK04jy1nHvSCkUrU04GPlKSxDeFS");
+const minecraftPundits = new Discord.WebhookClient("710347837065527396 ", "q6Vnt5BHOJJUfx9c1iyjth_qNYO-9BJ7vTtgDzcoi6XREgppSL__3-rrmWgZCYGMr6WM");
+const chaiseSwitch = new Discord.WebhookClient("710351310607876210", "_nCPvk7Vz7G2IO4Uo8wM5V0o_B1CrOMsMd94EmJCEhKL4tVYCF08rZv1mYSWuSfBja0e");
+const chaisePundits = new Discord.WebhookClient("710351226088325120", "RktALnD-5vZ7XPJOLhm9zDZV4TS6ziti3-y7zXM_rvW54hnVnEiRa42exppxCa27xAxW");   
+const bopsSwitch = new Discord.WebhookClient("710365264075685999", "7i4gpJcPBtOdmfQT-x_BZvWXiUNMYUD0q48_VTAz88c7A62xHMdrh9JhpSq8eOd51SP6");
+const bopsPundits = new Discord.WebhookClient("710366754987048990", "SB6I3KSY9UL9-xgh4ToZw_gA9vArtvssubWpC34zL58jmFzz7GiwtMMefGaUqi-p3g1R");
 
 client.on('message', msg => {
 if(msg.content === "!menu") {
@@ -255,6 +260,15 @@ if(msg.content === "!toggle BopsConnection") {
 //  \_| |_/_| |_|_| |_|\___/ \__,_|_| |_|\___\___|_| |_| |_|\___|_| |_|\__| \_| |_/ .__/| .__/ \__,_|_|  \__,_|\__|\__,_|___/
 //                                                                                | |   | |                                  
 //                  
+
+
+if(msg.content === "!createWebhook") {
+    msg.channel.createWebhook('Announcement Apparatus Webhook', {
+        avatar: 'https://i.imgur.com/wSTFkRM.png',
+    }).then(webhook => msg.channel.send(`Created webhook ${webhook} with id ${webhook.id} and token ${webhook.token}`)).catch(console.error);
+}
+
+
     var count = 0;
     var edits = "";
     var edits2 = "";
@@ -262,16 +276,43 @@ if(msg.content === "!toggle BopsConnection") {
     var deleted = false;
 
     if(enableAnnouncementApparatus) {
-    
+        if(msg.channel.id === "584510035657359501" || msg.channel.id === "635627814334496779") {
+            if (msg.author.id === client.user.id || msg.author.bot) return;
+                proclamationsPundits.send(msg.content, 
+            {
+                username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                avatarURL: msg.author.avatarURL(),
+                embeds: msg.embeds,
+                files: msg.attachments.array()
+            });
+        }
+        if(msg.channel.id === "663794628281237524") {
+            if (msg.author.id === client.user.id || msg.author.bot) return;
+                proclamationsSwitch.send(msg.content, 
+            {
+                username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                avatarURL: msg.author.avatarURL(),
+                embeds: msg.embeds,
+                files: msg.attachments.array()
+            });
+        }
+
+
+        /*
         if ( msg.member.id === "663829154700984352") {
             //do nothing
-        } else if (/*msg.content.startsWith(prefix) && */msg.member.id != "663829154700984352"){
+        } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
             const args = msg.content.slice(prefix.length).split(/ +/);
             const command = args.shift().toLowerCase();
             var channel = "0";
             var Attachment = (msg.attachments).array();
         
-            if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
+            if (msg.content === 'ping') {
+                msg.channel.send('Pong!');
+            } 
+            if (msg.content === "pong") {
+                msg.channel.send("That's my line dingus!");
+            } else if (msg.channel.id == 584510035657359501 || msg.channel.id == 635627814334496779) {
                 channel = "663794628281237524";
                 var backupChannel = "663794628281237524";
             } else if (msg.channel.id == 663794628281237524) {
@@ -280,7 +321,7 @@ if(msg.content === "!toggle BopsConnection") {
 
             }
             if (channel != "0") { 
-                client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content/*.slice(prefix.length)*/);
+                client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content.slice(prefix.length));
                 Attachment.forEach(function(attachment) {
                     client.channels.get(channel).send(attachment.url);
                 })
@@ -295,7 +336,7 @@ if(msg.content === "!toggle BopsConnection") {
                     
                 }, 60000);
             }
-    }
+    }*/
 }
     
 //  _____                                   
@@ -328,28 +369,13 @@ if(msg.content.startsWith("!reverse")/* && msg.member.id != "663829154700984352"
 
 
 //   Joel tracker
-
+/*
 if(msg.content.toLowerCase().includes("joel") && msg.member.id != "663829154700984352") {
     client.channels.get("696228640945340496").send("<@!284889295125479425>" + ", [" + "**" + msg.author.username + "**" + "] " + "mentioned you in " + "<#" + msg.channel.id + ">" + " on " + msg.createdAt + "]: " + `"` + msg.content + `"`);
 }
-if(hasOuijaTriggered === false) {
-    if(msg.content.toLowerCase().includes("ouija board") && msg.member.id != "663829154700984352") {
-        msg.channel.send("B");
-        msg.channel.send("I");
-        msg.channel.send("G");
-        msg.channel.send("C");
-        msg.channel.send("H");
-        msg.channel.send("U");
-        msg.channel.send("N");
-	    msg.channel.send("G");
-	    msg.channel.send("U");
-	    msg.channel.send("S");
-        msg.channel.send("goodbye"); 
-        hasOuijaTriggered = true;
-    }
-}
+*/
 
-
+  
 
 
 
@@ -509,26 +535,26 @@ if(enablePunctuationCorrection){
 // | .__/|_|_| |_|\__, | | .__/ \___/|_| |_|\__, |
 // | |             __/ | | |                 __/ |
 // |_|            |___/  |_|                |___/ 
-if(enablePingPong) {
-    if(msg.content == 'ping'){
-        msg.channel.send('pong');
-    }
+// if(enablePingPong) {
+//     if(msg.content == 'ping'){
+//         msg.channel.send('pong');
+//     }
 
-    if(msg.content == 'ding'){
-        msg.channel.send('dong');
+//     if(msg.content == 'ding'){
+//         msg.channel.send('dong');
        
-    }
-    if(msg.content == 'sing'){
-        msg.channel.send(`song`);
-    }
-    if(msg.member.id != "663829154700984352" && msg.content == 'pong'){
-        msg.channel.send(`That's my line, dingus!`);
-    }
-    if(msg.content == '!jacob'){
-        msg.channel.send(`hi jacob`);
-    }
+//     }
+//     if(msg.content == 'sing'){
+//         msg.channel.send(`song`);
+//     }
+//     if(msg.member.id != "663829154700984352" && msg.content == 'pong'){
+//         msg.channel.send(`That's my line, dingus!`);
+//     }
+//     if(msg.content == '!jacob'){
+//         msg.channel.send(`hi jacob`);
+//     }
 
-}
+// }
     /*
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
         msg.channel.send(`You've NEVER played tuber simulator??`);
@@ -730,7 +756,28 @@ if(msg.channel.id === "690359993693896718" && msg.member.id != "6638291547009843
 // |_|  |_|_|_| |_|\___|\___|_|  \__,_|_|  \__|  \___|_| |_|\__,_|_| |_|_| |_|\___|_|
 
 if(enableMinecraftChannelConnection) {
-    
+    if(enableAnnouncementApparatus) {
+        if(msg.channel.id === "629451594236297255") {
+            if (msg.author.id === client.user.id || msg.author.bot) return;
+                minecraftPundits.send(msg.content, 
+            {
+                username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                avatarURL: msg.author.avatarURL(),
+                embeds: msg.embeds,
+                files: msg.attachments.array()
+            });
+        }
+        if(msg.channel.id === "663815810489253890") {
+            if (msg.author.id === client.user.id || msg.author.bot) return;
+                minecraftSwitch.send(msg.content, 
+            {
+                username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                avatarURL: msg.author.avatarURL(),
+                embeds: msg.embeds,
+                files: msg.attachments.array()
+            });
+        }
+    /*
     if (msg.member.id === "663829154700984352") {
         //do nothing
     } else if (msg.member.id != "663829154700984352"){
@@ -768,10 +815,11 @@ if(enableMinecraftChannelConnection) {
             }, 60000);
             
         }
-    }  
+    } 
+    */ 
 }
 
-
+}
 
 //   _____ _           _            _                                     _____                            _   _             
 //  / ____| |         (_)          | |                                   / ____|                          | | (_)            
@@ -783,40 +831,61 @@ if(enableMinecraftChannelConnection) {
 //                                                         |___/                                                            
 
 if(enableChaiseLoungueConnection) {
-    
-    if (msg.member.id === "663829154700984352") {
-        //do nothing
-    } else if (msg.member.id != "663829154700984352"){
-        const args = msg.content.slice(prefix.length).split(/ +/);
-        const command = args.shift().toLowerCase();
-        var channel = "0";
-        var Attachment = (msg.attachments).array();
-    
-        if (msg.channel.id == 643530709260042319) {
-            channel = "663794384956948480";
-            var backupChannel = "663794384956948480";
-        } else if (msg.channel.id == 663794384956948480) {
-            channel = "643530709260042319";
-            var backupChannel = "643530709260042319";
+    if(enableAnnouncementApparatus) {
+        if(msg.channel.id === "643530709260042319") {
+            if (msg.author.id === client.user.id || msg.author.bot) return;
+                chaiseSwitch.send(msg.content, 
+            {
+                username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                avatarURL: msg.author.avatarURL(),
+                embeds: msg.embeds,
+                files: msg.attachments.array()
+            });
         }
-        if (channel != "0") { 
-            client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
-            Attachment.forEach(function(attachment) {
-                client.channels.get(channel).send(attachment.url);
-              })
+        if(msg.channel.id === "663794384956948480") {
+            if (msg.author.id === client.user.id || msg.author.bot) return;
+                chaisePundits.send(msg.content, 
+            {
+                username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                avatarURL: msg.author.avatarURL(),
+                embeds: msg.embeds,
+                files: msg.attachments.array()
+            });
+        }
+    }
+    // if (msg.member.id === "663829154700984352") {
+    //     //do nothing
+    // } else if (msg.member.id != "663829154700984352"){
+    //     const args = msg.content.slice(prefix.length).split(/ +/);
+    //     const command = args.shift().toLowerCase();
+    //     var channel = "0";
+    //     var Attachment = (msg.attachments).array();
+    
+    //     if (msg.channel.id == 643530709260042319) {
+    //         channel = "663794384956948480";
+    //         var backupChannel = "663794384956948480";
+    //     } else if (msg.channel.id == 663794384956948480) {
+    //         channel = "643530709260042319";
+    //         var backupChannel = "643530709260042319";
+    //     }
+    //     if (channel != "0") { 
+    //         client.channels.get(channel).send("[" + msg.author.username + "] " + msg.content);
+    //         Attachment.forEach(function(attachment) {
+    //             client.channels.get(channel).send(attachment.url);
+    //           })
 
-              setTimeout(function(){ 
-                edits2 = msg.content;
+    //           setTimeout(function(){ 
+    //             edits2 = msg.content;
                 
-                if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
-                    client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
-                    //console.log("Edit detected in channel " + backupChannel);
+    //             if(edits != edits2 && (!msg.deleted || !(msg.edits.content < 2))) {
+    //                 client.channels.get(backupChannel).send(" `" + edits + "` " + "was edited to -> " + " `" + msg.content + "` " + "by " + "[" + msg.author.username + "]");
+    //                 //console.log("Edit detected in channel " + backupChannel);
                     
-                }
+    //             }
                 
-            }, 60000);
-        }
-    }  
+    //         }, 60000);
+    //     }
+    // }  
 }
 
                               
@@ -835,6 +904,32 @@ if(enableChaiseLoungueConnection) {
 
 if(enableBopsConnection) {
     
+    if(enableAnnouncementApparatus) {
+        if(msg.content.startsWith(prefix)){
+            
+            if(msg.channel.id === "663815759847227392") {
+               
+                if (msg.author.id === client.user.id || msg.author.bot) return;
+                    bopsSwitch.send(msg.content, 
+                {
+                    username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                    avatarURL: msg.author.avatarURL(),
+                });
+            }
+            if(msg.channel.id === "626608521907142669") {
+                if (msg.author.id === client.user.id || msg.author.bot) return;
+                    bopsPundits.send(msg.content, 
+                {
+                    username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
+                    avatarURL: msg.author.avatarURL(),
+                    embeds: msg.embeds,
+                    files: msg.attachments.array()
+                });
+            }
+        }
+        
+    
+    /*
     if (msg.member.id === "663829154700984352") {
         //do nothing
     } else if (msg.content.startsWith(prefix) && msg.member.id != "663829154700984352"){
@@ -866,8 +961,13 @@ if(enableBopsConnection) {
                 
             }, 60000);
         }
+        */
 }
 }
+
+
+
+
 
 
     /*
@@ -922,5 +1022,5 @@ if(enableBopsConnection) {
     //     }
     // }
 });
-client.login('NjYzODI5MTU0NzAwOTg0MzUy.Xk4YOA.40Mc_7zi5CiJigCzgA0yTZlesNY')
+client.login('NjYzODI5MTU0NzAwOTg0MzUy.Xk4YOA.40Mc_7zi5CiJigCzgA0yTZlesNY');
 //client.login('NjQ2MDYxMTcwMTUwNzM1OTA0.XhQLnA.7Km8HYBEsTv3JyJRxrSlToK2qeg');
