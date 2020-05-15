@@ -524,7 +524,9 @@ if(enablePunctuationCorrection){
 }
 
 
-
+if(msg.content === 'ping'){
+    msg.channel.send('pong');
+}
 
 
 //        _                                       
@@ -553,7 +555,6 @@ if(enablePunctuationCorrection){
 //     if(msg.content == '!jacob'){
 //         msg.channel.send(`hi jacob`);
 //     }
-
 // }
     /*
     if(msg.member.id === '549762134347612162' && msg.content.includes('what') || msg.member.id === '549762134347612162' && msg.content.includes('What')){
