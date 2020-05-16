@@ -12,10 +12,10 @@ client.once('ready', async () => {
 });
 var msgToSend = "";
 client.on('message', msg => {
-    
     var beforeEdit = msg.content;
     var afterEdit = "afterEdit";
-    setTimeout(function(){ 
+    if(msg.channel.id === "584510035657359501" || msg.channel.id === "635627814334496779" || msg.channel.id === "626608521907142669" || msg.channel.id === "629451594236297255" || msg.channel.id === "643530709260042319") {
+      setTimeout(function(){ 
         afterEdit = msg.content;
         msgToSend = parseEdit(beforeEdit, afterEdit);
         if(beforeEdit != afterEdit) {
@@ -28,6 +28,9 @@ client.on('message', msg => {
         }
         
     }, 20000);
+    }
+    
+    
     var EDITMODE = "concise";
     var ExplicitWeight = 2;
     //the higher this is, the more likely you are to get a breakdown of changes
