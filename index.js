@@ -277,7 +277,7 @@ if(msg.content === "!createWebhook") {
 
     if(enableAnnouncementApparatus) {
         if(msg.channel.id === "584510035657359501" || msg.channel.id === "635627814334496779") {
-            if (msg.author.id === client.user.id || msg.author.bot) return;
+            if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                 proclamationsPundits.send(msg.content, 
             {
                 username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -287,7 +287,7 @@ if(msg.content === "!createWebhook") {
             });
         }
         if(msg.channel.id === "663794628281237524") {
-            if (msg.author.id === client.user.id || msg.author.bot) return;
+            if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                 proclamationsSwitch.send(msg.content, 
             {
                 username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -758,7 +758,7 @@ if(msg.channel.id === "690359993693896718" && msg.member.id != "6638291547009843
 if(enableMinecraftChannelConnection) {
     if(enableAnnouncementApparatus) {
         if(msg.channel.id === "629451594236297255") {
-            if (msg.author.id === client.user.id || msg.author.bot) return;
+            if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                 minecraftPundits.send(msg.content, 
             {
                 username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -768,7 +768,7 @@ if(enableMinecraftChannelConnection) {
             });
         }
         if(msg.channel.id === "663815810489253890") {
-            if (msg.author.id === client.user.id || msg.author.bot) return;
+            if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                 minecraftSwitch.send(msg.content, 
             {
                 username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -833,7 +833,7 @@ if(enableMinecraftChannelConnection) {
 if(enableChaiseLoungueConnection) {
     if(enableAnnouncementApparatus) {
         if(msg.channel.id === "643530709260042319") {
-            if (msg.author.id === client.user.id || msg.author.bot) return;
+            if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                 chaiseSwitch.send(msg.content, 
             {
                 username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -843,7 +843,7 @@ if(enableChaiseLoungueConnection) {
             });
         }
         if(msg.channel.id === "663794384956948480") {
-            if (msg.author.id === client.user.id || msg.author.bot) return;
+            if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                 chaisePundits.send(msg.content, 
             {
                 username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -909,7 +909,7 @@ if(enableBopsConnection) {
             
             if(msg.channel.id === "663815759847227392") {
                
-                if (msg.author.id === client.user.id || msg.author.bot) return;
+                if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                     bopsSwitch.send(msg.content, 
                 {
                     username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
@@ -917,7 +917,7 @@ if(enableBopsConnection) {
                 });
             }
             if(msg.channel.id === "626608521907142669") {
-                if (msg.author.id === client.user.id || msg.author.bot) return;
+                if (msg.author.id === client.user.id/* || msg.author.bot*/) return;
                     bopsPundits.send(msg.content, 
                 {
                     username: msg.member.nickname ? `${msg.member.nickname} (${msg.author.username}/#${msg.author.discriminator})` : `${msg.author.username}#${msg.author.discriminator}`,
