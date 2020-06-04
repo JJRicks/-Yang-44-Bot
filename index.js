@@ -264,7 +264,7 @@ if(msg.content === "!toggle BopsConnection") {
 
 if(msg.content === "!createWebhook") {
     msg.channel.createWebhook('Announcement Apparatus Webhook', {
-        avatar: 'https://i.imgur.com/wSTFkRM.png',
+        avatar: 'https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png',
     }).then(webhook => msg.channel.send(`Created webhook ${webhook} with id ${webhook.id} and token ${webhook.token}`)).catch(console.error);
 }
 
@@ -896,7 +896,7 @@ if(enableChaiseLoungueConnection) {
 //  ____                     _____                            _   _             
 // |  _ \                   / ____|                          | | (_)            
 // | |_) | ___  _ __  ___  | |     ___  _ __  _ __   ___  ___| |_ _  ___  _ __  
-// |  _ < / _ \| '_ \/ __| | |    / _ \| '_ \| '_ \ / _ \/ __| __| |/ _ \| '_ \ 
+// |  _ < / _ \| '_ \/ __| | |    / _ \| '_ \| '_ \ / _ \/ __| __| |/ _ \| '_ \  
 // | |_) | (_) | |_) \__ \ | |___| (_) | | | | | | |  __/ (__| |_| | (_) | | | |
 // |____/ \___/| .__/|___/  \_____\___/|_| |_|_| |_|\___|\___|\__|_|\___/|_| |_|
 //             | |                                                              
